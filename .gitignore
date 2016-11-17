@@ -1,0 +1,10 @@
+
+
+*.log
+*.pdf
+*.tex
+*.aux
+*.toc
+
+
+*.swp
