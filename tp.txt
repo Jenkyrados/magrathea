@@ -1,0 +1,40 @@
+Basé sur https://github.com/Newmu/Theano-Tutorials/blob/master/3_net.py
+
+> Dire que Theano utilise des vecteurs symboliques = ce ne sont pas vraiment des variables, mais des symboles.
+Example :
+
+b = theano.tensor.iscalar()
+c = theano.tensor.iscalar()
+a = b+c
+add = theano.function(inputs=[c, b], outputs=a)
+
+print(add(4,3)) # 7
+print(add(5,4)) # 9
+
+> on donnera la fonction pour récupérer et découper mnist
+> ainsi que la fonction de conversion en floatX
+
+
+> Créer une fonction qui, à partir de deux entiers, créé et retourne un tableau 2D d'entiers
+> Ceux-ci seront les poids (d'une couche)
+> Important : utiliser theano.shared() avant de renvoyer, cela sert à convertir en symbolique.
+> Hint : utiliser np.random
+
+> Créer une fonction prenant en paramêtre une entrée et deux liste de poids
+> Et retournant un modèle, avec une première couche sigmoide et une deuxième couche softmax
+> Hint : utiliser tensor.nnet et tensor.dot
+
+> Créer une fonction qui prend en paramêtres : un cout, un ensemble de paramêtres, et une vitesse d'apprentissage
+> Elle calcule une etape de SGD
+> Pour cela, elle doit calculer les gradients sur les paramètres
+> puis, elle renvoie une liste dont chaque élément est une liste de deux éléments :
+> le paramètre de base, et le paramètre modifié (para - gradient * vitesse)
+
+> On écrit les lignes 26 - 42, en expliquant chaque ligne
+
+> Créer une boucle qui :
+> Calcule le nouveau cout en utilisant train, un example par example
+> et imprime le pourcentage de réussite
+
+> même chose mais tout les examples coups par coups
+> ^ mais un "batch" par "batch"
